@@ -6,11 +6,12 @@
 
 "   Activate pathogen
 "   ------------------------------------------------------------
-    call pathogen#runtime_append_all_bundles()
-    call pathogen#helptags()
+    execute pathogen#infect()
 
-"   Use spaces instead of tabs 
+"   Check for indentation rules in after/ftplugin 
 "   ------------------------------------------------------------
-    set tabstop=4
-    set shiftwidth=4
-    set expandtab
+    filetype plugin indent on
+
+"   Turn on syntax highlighting 
+"   ------------------------------------------------------------
+    syntax on
