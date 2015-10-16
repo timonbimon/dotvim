@@ -12,6 +12,9 @@
 "   ------------------------------------------------------------
     filetype plugin indent on
 
-"   Turn on syntax highlighting 
+"   Use solarized color theme 
 "   ------------------------------------------------------------
-    syntax on
+    syntax enable
+    set background=dark
+    colorscheme solarized   
+   
