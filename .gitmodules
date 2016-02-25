@@ -4,3 +4,9 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = http://github.com/tpope/vim-surround.git
+[submodule "bundle/bundle/commentary"]
+	path = bundle/bundle/commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = https://github.com/tpope/vim-commentary.git
