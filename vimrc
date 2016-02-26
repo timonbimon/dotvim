@@ -21,21 +21,8 @@
 
 "   Set-up relative and absolute line number handling
 "   ------------------------------------------------------------
-    function! NumberToggle()
-      if(&relativenumber == 1)
-         set number
-      elseif(&number == 1)
-         set nonumber
-      else
-         set relativenumber
-      endif
-    endfunc
-    
-    nnoremap <C-n> :call NumberToggle()<cr>
-    :au FocusLost * :set number
-    :au FocusGained * :set relativenumber
-    autocmd InsertEnter * :set number
-    autocmd InsertLeave * :set relativenumber
+    set number
+    set relativenumber
 
                  
    
