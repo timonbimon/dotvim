@@ -5,6 +5,9 @@
 - clean: ['~']
 
 - link:
+    ~/.config/nvim:
+      create: true
+      path: config/nvim
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.ideavimrc: ideavimrc
