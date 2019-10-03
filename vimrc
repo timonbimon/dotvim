@@ -20,8 +20,8 @@
 "   General settings
 "   ------------------------------------------------------------
     set nowrap        " don't wrap lines
-    set tabstop=4     " a tab is four spaces
-    set shiftwidth=4  " number of spaces to use for autoindenting
+    set tabstop=2     " a tab is two spaces
+    set shiftwidth=2  " number of spaces to use for autoindenting
     set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
     set backspace=indent,eol,start
                          " allow backspacing over everything in insert mode
