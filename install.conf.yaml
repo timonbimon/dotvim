@@ -5,12 +5,18 @@
 - clean: ['~']
 
 - link:
+    # vim
     ~/.config/nvim:
       create: true
       path: config/nvim
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.ideavimrc: ideavimrc
+
+    # fzf
+    ~/.fzf.zsh: fzf.zsh
+    ~/.fzf.bash: fzf.bash
+
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
