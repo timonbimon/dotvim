@@ -1,21 +1,22 @@
-[submodule "bundle/solarized"]
-	path = bundle/solarized
+[submodule "vim/bundle/solarized"]
+	path = vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
 	url = http://github.com/tpope/vim-surround.git
-[submodule "bundle/bundle/commentary"]
-	path = bundle/bundle/commentary
+[submodule "vim/bundle/commentary"]
+	path = vim/bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "bundle/commentary"]
-	path = bundle/commentary
-	url = https://github.com/tpope/vim-commentary.git
-[submodule "bundle/ag"]
-	path = bundle/ag
+[submodule "vim/bundle/ag"]
+	path = vim/bundle/ag
 	url = https://github.com/rking/ag.vim.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/vim-nerdtree-tabs"]
-	path = bundle/vim-nerdtree-tabs
+[submodule "vim/bundle/vim-nerdtree-tabs"]
+	path = vim/bundle/vim-nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
