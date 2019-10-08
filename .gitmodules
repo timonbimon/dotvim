@@ -11,3 +11,6 @@
 [submodule "vim/bundle/multiple-cursors"]
 	path = vim/bundle/multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors
+[submodule "prezto"]
+	path = prezto
+	url = https://github.com/sorin-ionescu/prezto
