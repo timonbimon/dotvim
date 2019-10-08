@@ -1,1 +1,24 @@
+set surround
+set multiple-cursors
+set commentary
+
 source ~/.vimrc
+
+
+" vim-multiple-cursors
+" ------------------------------------------------------------
+" IDEAVim uses <A-n> for <C-n>
+map <C-n> <A-n>
+map <C-x> <A-x>
+map <C-p> <A-p>
+map g<C-p> g<A-p>
+
+
+" PyCharm Refactoring
+" ------------------------------------------------------------
+nmap <leader>ri :action Inline<CR>
+nmap <leader>rv :action IntroduceVariable<CR>
+nmap <leader>rm :action Move<CR>
+
+
+

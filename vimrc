@@ -17,6 +17,7 @@
     set number
     set relativenumber
 
+
 "   General settings
 "   ------------------------------------------------------------
     set nowrap        " don't wrap lines
@@ -44,12 +45,14 @@
 
 "   Key mappings
 "   ------------------------------------------------------------
-    " change the mapleader from \ to ,
-    let mapleader=","
+    " change the mapleader from \ to space
+    let mapleader=" "
+    map <Space> <Nop>
 
-    " Quickly edit/reload the vimrc file
-    nmap <silent> <leader>ev :e $MYVIMRC<CR>
-    nmap <silent> <leader>sv :so $MYVIMRC<CR>
+    " (v)imrc (e)dit
+    " (v)imrc (r)eload
+    nmap <silent> <leader>ve :e $MYVIMRC<CR>
+    nmap <silent> <leader>vr :so $MYVIMRC<CR>
 
     " Make 0 go to the first character rather than the beginning
     " of the line. When we're programming, we're almost always
@@ -57,6 +60,8 @@
     " you want the traditional beginning of line, use ^
     nnoremap 0 ^
     nnoremap ^ 0
+    nnoremap L $
+    nnoremap H ^
 
     " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
     " this is helpful to paste someone the path you're looking at
@@ -66,33 +71,31 @@
     "Clear current search highlight by double tapping //
     nmap <silent> // :nohlsearch<CR>
 
-    "(v)im (r)eload
-    nmap <silent> <leader>vr :so %<CR>
 
 "   surround.vim
 "   ------------------------------------------------------------
-    " ," Surround a word with "quotes"
+    " Surround a word with "quotes"
     map <leader>" ysiw"
     vmap <leader>" c"<C-R>""<ESC>
 
-    " ,' Surround a word with 'single quotes'
+    " Surround a word with 'single quotes'
     map <leader>' ysiw'
     vmap <leader>' c'<C-R>"'<ESC>
 
-    " ,) or ,( Surround a word with (parens)
+    " Surround a word with (parens)
     " The difference is in whether a space is put in
     map <leader>( ysiw(
     map <leader>) ysiw)
     vmap <leader>( c( <C-R>" )<ESC>
     vmap <leader>) c(<C-R>")<ESC>
 
-    " ,[ Surround a word with [brackets]
+    " Surround a word with [brackets]
     map <leader>] ysiw]
     map <leader>[ ysiw[
     vmap <leader>[ c[ <C-R>" ]<ESC>
     vmap <leader>] c[<C-R>"]<ESC>
 
-    " ,{ Surround a word with {braces}
+    " Surround a word with {braces}
     map <leader>} ysiw}
     map <leader>{ ysiw{
     vmap <leader>} c{ <C-R>" }<ESC>
