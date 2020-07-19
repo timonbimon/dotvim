@@ -41,19 +41,53 @@ alias ll='exa -alh'
 alias vim="nvim"
 alias j='fasd_cd'  # Changes the current working directory (not interactively).
 
+# add gcloud auto completion
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
+# Zinit -> WIP
+# if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+#     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+#     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+#     command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+#         print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+#         print -P "%F{160}▓▒░ The clone has failed.%f%b"
+# fi
+
+# source "$HOME/.zinit/bin/zinit.zsh"
+# autoload -Uz _zinit
+# (( ${+_comps} )) && _comps[zinit]=_zinit
+
+# # zinit annexes
+# zinit light zinit-zsh/z-a-submods
+
+
+# zinit snippet PZT::modules/environment
+# zinit snippet PZT::modules/terminal
+# zinit snippet PZT::modules/editor
+# zinit snippet PZT::modules/history
+# zinit snippet PZT::modules/directory
+# zinit snippet PZT::modules/spectrum
+# zinit snippet PZT::modules/utility
+# zinit snippet PZT::modules/completion
+# zinit snippet PZT::modules/fasd
+# zinit snippet PZT::modules/osx
+# zinit snippet PZT::modules/ssh
+# zinit snippet PZT::modules/git
+
+# zinit light zsh-users/zsh-syntax-highlighting
+# zinit light zsh-users/zsh-history-substring-search
 
 # Add fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd -HI --follow --exclude ".git" --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# added by pipsi (https://github.com/mitsuhiko/pipsi)
-export PATH="/Users/timon/.local/bin:$PATH"
+# use jump
+eval "$(jump shell)"
 
-# add gcloud auto completion
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # use Starship prompt
 eval "$(starship init zsh)"
+
 
