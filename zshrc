@@ -41,8 +41,11 @@ alias ll='exa -alh'
 alias vim="nvim"
 
 # add gcloud auto completion
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+if [[ -d "$(brew --prefix)/Caskroom/google-cloud-sdk" ]]; then
+  source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+  source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+fi
+
 
 # Zinit -> WIP
 # if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
