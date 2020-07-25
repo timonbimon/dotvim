@@ -39,7 +39,6 @@ export LANG=en_US.UTF-8
 alias ls='exa'
 alias ll='exa -alh'
 alias vim="nvim"
-alias j='fasd_cd'  # Changes the current working directory (not interactively).
 
 # add gcloud auto completion
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
@@ -70,13 +69,35 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 # zinit snippet PZT::modules/spectrum
 # zinit snippet PZT::modules/utility
 # zinit snippet PZT::modules/completion
-# zinit snippet PZT::modules/fasd
 # zinit snippet PZT::modules/osx
 # zinit snippet PZT::modules/ssh
 # zinit snippet PZT::modules/git
 
 # zinit light zsh-users/zsh-syntax-highlighting
 # zinit light zsh-users/zsh-history-substring-search
+# # # Don't bind these keys until ready
+# bindkey -r '^[[A'
+# bindkey -r '^[[B'
+# function __bind_history_keys() {
+#   bindkey '^[[A' history-substring-search-up
+#   bindkey '^[[B' history-substring-search-down
+# }
+# # History substring searching
+# zinit ice wait lucid atload'__bind_history_keys'
+# zinit light zsh-users/zsh-history-substring-search
+
+# # autosuggestions, trigger precmd hook upon load
+# zinit ice wait lucid atload'_zsh_autosuggest_start'
+# zinit light zsh-users/zsh-autosuggestions
+# export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=10
+
+# # Tab completions
+# zinit ice wait lucid blockf atpull'zinit creinstall -q .'
+# zinit light zsh-users/zsh-completions
+
+# # Syntax highlighting
+# zinit ice wait lucid atinit'zpcompinit; zpcdreplay'
+# zinit light zdharma/fast-syntax-highlighting
 
 # Add fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
