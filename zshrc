@@ -1,25 +1,22 @@
 #
 # Executes commands at the start of an interactive session.
 #
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
 # add homebrewed binaries at beginning of path
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-# asdf, pyenv & nodenv
-. $(brew --prefix asdf)/asdf.sh
-# eval "$(nodenv init -)"
 
 # add homebrew completion's
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-  autoload -Uz compinit
-  compinit
+  autoload -Uz compinit && compinit
 fi
+
+# asdf, pyenv & nodenv
+if type asdf &>/dev/null; then
+  . $(brew --prefix asdf)/asdf.sh
+fi
+# eval "$(nodenv init -)"
 
 # add completions for poetry
 fpath+=~/.zfunc
