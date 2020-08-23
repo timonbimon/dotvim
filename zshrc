@@ -33,8 +33,12 @@ export LANG=en_US.UTF-8
 
 
 # Add some aliases
+alias du="dust -r"
+alias find="fd"
 alias ls='exa'
 alias ll='exa -alh'
+alias sed='sd'
+alias time="hyperfine"
 alias vim="nvim"
 
 # add gcloud auto completion
