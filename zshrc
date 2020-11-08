@@ -31,9 +31,12 @@ fi
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# export Editor; e.g. used by espanso
+export EDITOR=/usr/local/bin/nvim
+
 
 # Add some aliases
-alias du="dust -r"
+alias du="dust"
 alias find="fd"
 alias ls='exa'
 alias ll='exa -alh'
@@ -47,61 +50,6 @@ if [[ -d "$(brew --prefix)/Caskroom/google-cloud-sdk" ]]; then
   source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 fi
 
-
-# Zinit -> WIP
-# if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-#     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-#     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-#     command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
-#         print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-#         print -P "%F{160}▓▒░ The clone has failed.%f%b"
-# fi
-
-# source "$HOME/.zinit/bin/zinit.zsh"
-# autoload -Uz _zinit
-# (( ${+_comps} )) && _comps[zinit]=_zinit
-
-# # zinit annexes
-# zinit light zinit-zsh/z-a-submods
-
-
-# zinit snippet PZT::modules/environment
-# zinit snippet PZT::modules/terminal
-# zinit snippet PZT::modules/editor
-# zinit snippet PZT::modules/history
-# zinit snippet PZT::modules/directory
-# zinit snippet PZT::modules/spectrum
-# zinit snippet PZT::modules/utility
-# zinit snippet PZT::modules/completion
-# zinit snippet PZT::modules/osx
-# zinit snippet PZT::modules/ssh
-# zinit snippet PZT::modules/git
-
-# zinit light zsh-users/zsh-syntax-highlighting
-# zinit light zsh-users/zsh-history-substring-search
-# # # Don't bind these keys until ready
-# bindkey -r '^[[A'
-# bindkey -r '^[[B'
-# function __bind_history_keys() {
-#   bindkey '^[[A' history-substring-search-up
-#   bindkey '^[[B' history-substring-search-down
-# }
-# # History substring searching
-# zinit ice wait lucid atload'__bind_history_keys'
-# zinit light zsh-users/zsh-history-substring-search
-
-# # autosuggestions, trigger precmd hook upon load
-# zinit ice wait lucid atload'_zsh_autosuggest_start'
-# zinit light zsh-users/zsh-autosuggestions
-# export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=10
-
-# # Tab completions
-# zinit ice wait lucid blockf atpull'zinit creinstall -q .'
-# zinit light zsh-users/zsh-completions
-
-# # Syntax highlighting
-# zinit ice wait lucid atinit'zpcompinit; zpcdreplay'
-# zinit light zdharma/fast-syntax-highlighting
 
 # Add fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
