@@ -12,11 +12,10 @@ if type brew &>/dev/null; then
   autoload -Uz compinit && compinit
 fi
 
-# asdf, pyenv & nodenv
+# asdf
 if type asdf &>/dev/null; then
   . $(brew --prefix asdf)/asdf.sh
 fi
-# eval "$(nodenv init -)"
 
 # add completions for poetry
 fpath+=~/.zfunc
@@ -50,7 +49,6 @@ if [[ -d "$(brew --prefix)/Caskroom/google-cloud-sdk" ]]; then
   source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 fi
 
-
 # Add fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd -HI --follow --exclude ".git" --type f'
@@ -59,8 +57,5 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # use jump
 eval "$(jump shell)"
 
-
 # use Starship prompt
 eval "$(starship init zsh)"
-
-
